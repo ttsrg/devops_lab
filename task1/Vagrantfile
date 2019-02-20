@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure("2") do |config|
+
+        config.vm.define "python1" do |config|
+        config.vm.box = "sbeliakou/centos"
+        config.vm.hostname = "python1"
+        config.vm.network "private_network", ip: "192.168.56.201"
+                config.vm.provider "virtualbox" do |vb|
+                vb.memory = "1024"
+                end
+#        config.vm.network  "forwarded_port", guest: 80, host: 8080
+#	config.vm.provision "shell", path: "setup.sh", keep_color: true
+	config.vm.provision "shell", path: "install.sh", keep_color: true
+	config.vm.provision "shell", inline: "echo ---=== done ===----"
+        end
+end
