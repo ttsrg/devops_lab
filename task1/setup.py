@@ -10,4 +10,3 @@ setup(
     description="hello world",
     license="fakelicense"
 )
-
