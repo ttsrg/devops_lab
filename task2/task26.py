@@ -1,3 +1,4 @@
+import re
 f = open("input.txt", 'r')
 w = open("output.txt", "w")
 i = 1
@@ -17,7 +18,6 @@ for line in f:
 s = str(line)
 print(s)
 
-import re
 
 line = s
 print(re.match(r'(?P<n1>-?\d+)(?P<oper>[-/*+])(?P<n2>-?\d+)=(?P<n3>-?\d+)$', line))
