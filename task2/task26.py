@@ -20,9 +20,11 @@ print(s)
 
 
 line = s
-print(re.match(r'(?P<n1>-?\d+)(?P<oper>[-/*+])(?P<n2>-?\d+)=(?P<n3>-?\d+)$', line))
+print(re.match(r'(?P<n1>-?\d+)(?P<oper>'
+               r'[-/*+])(?P<n2>-?\d+)=(?P<n3>-?\d+)$', line))
 
-m = re.match(r'(?P<n1>-?\d+)(?P<oper>[-/*+])(?P<n2>-?\d+)=(?P<n3>-?\d+)$', line)
+m = re.match(r'(?P<n1>-?\d+)(?P<oper>[-/*+])'
+             r'(?P<n2>-?\d+)=(?P<n3>-?\d+)$', line)
 if str(m) == 'None':
     print("non correct expression")
     w.write("NO")
