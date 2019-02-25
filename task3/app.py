@@ -1,11 +1,13 @@
 # pip install psutil configparser
-# Requirement already satisfied: psutil in ./.pyenv/versions/3.7.2/lib/python3.7/site-packages (5.5.1)
-# Requirement already satisfied: configparser in ./.pyenv/versions/3.7.2/lib/python3.7/site-packages (3.7.3)
+# Requirement already satisfied: psutil in
+# ./.pyenv/versions/3.7.2/lib/python3.7/site-packages (5.5.1)
+# Requirement already satisfied: configparser in
+# ./.pyenv/versions/3.7.2/lib/python3.7/site-packages (3.7.3)
 # I don't know why parser doesn't work
 
 
 import time
-import configparser
+#import configparser
 import psutil
 
 
@@ -21,13 +23,13 @@ class Mon:
         ts = time.ctime()
         ss = "SNAPSHOT"
         if outputlog == "txt":
-            l = open("mon.log", "a")
-            l.write(ss + " " + str(
-                Mon.count) + ": " + ts + " " + cpu + " " + mem + " " + vmem + " " + io + " " + net + "\n")
+            log = open("mon.log", "a")
+            log.write(ss + " " + str(Mon.count) + ": " + ts + " " + cpu +
+                      " " + mem + " " + vmem + " " + io + " " + net + "\n")
             Mon.count = Mon.count + 1
-        # l.close()
         else:
-            print("This output isn't exist. Our team is working on this feature......")
+            print("This output isn't exist. "
+                  "Our team is working on this feature......")
             exit(1)
 
 
