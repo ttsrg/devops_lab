@@ -25,10 +25,10 @@ class Mon:
         if outputlog == "txt":
             log = open("mon.log", "a")
             log.write(ss + " " + str(
-                Mon.count) + ": " + ts + " " + cpu + ""
-                                                     " " +
-                      mem + " " + vmem + " " + io + " " + net + "\n")
+                Mon.count) + ": " + ts + " " + cpu + "" + mem + \
+                      " " + vmem + " " + io + " " + net + "\n")
             Mon.count = Mon.count + 1
+            log.close()
         else:
             print("This output isn't exist. "
                   "Our team is working on this feature......")
