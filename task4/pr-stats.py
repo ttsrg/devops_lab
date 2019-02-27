@@ -9,13 +9,11 @@ if __name__ == "__main__":
     try:
 
         if str(sys.argv[1]) == "-h":
-            print("Usage: ./pr-stats.py [yours gitloginname]"
-                  " [repo's URL address]")
+            print("Usage: ./pr-stats.py [yours gitloginname] [repo's URL address]")
             exit()
 
         if str(sys.argv[1]) == "--help":
-            print("Usage: ./pr-stats.py [yours gitloginname]"
-                  " [repo's URL address]")
+            print("Usage: ./pr-stats.py [yours gitloginname] [repo's URL address]")
             exit()
 
         if str(sys.argv[1]) == "--version":
