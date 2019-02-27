@@ -16,7 +16,6 @@ if __name__ == "__main__":
             print("Usage: ./pr-stats.py [yours gitloginname] [repo's URL address]")
             exit()
 
-
         if str(sys.argv[1]) == "--version":
             print("pr-stats.py Ver. 1.0")
             exit()
@@ -34,8 +33,8 @@ gitloginname = sys.argv[1]
 gitrepoapi = sys.argv[2]
 gitpasswd = getpass.getpass(prompt='Please, enter your GIThub password: ', stream=None)
 
-#gitloginname = 'ttsrg'
-#gitrepoapi = "https://api.github.com/repos/alenaPy/devops_lab/pulls"
+# gitloginname = 'ttsrg'
+# gitrepoapi = "https://api.github.com/repos/alenaPy/devops_lab/pulls"
 
 reqgit = requests.get(gitrepoapi, auth=(gitloginname, gitpasswd)).json()
 
@@ -47,4 +46,4 @@ for i in range(30):
     print("Pushed_at: %s" % reqgit[i]['head']['repo']['pushed_at'])
     print("Updated_at: %s" % reqgit[i]['head']['repo']['updated_at'])
     print("Closed_at: %s" % reqgit[i]['closed_at'])
-    print("Size: %s" % reqgit[i]['head']['repo']['size']+"\n---===---")
+    print("Size: %s" % reqgit[i]['head']['repo']['size'] + "\n---===---")
