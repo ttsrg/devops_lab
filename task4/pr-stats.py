@@ -9,11 +9,13 @@ if __name__ == "__main__":
     try:
 
         if str(sys.argv[1]) == "-h":
-            print("Usage: ./pr-stats.py [yours gitloginname] [repo's URL address]")
+            print("Usage: ./pr-stats.py [yours gitloginname]"
+                  " [repo's URL address]")
             exit()
 
         if str(sys.argv[1]) == "--help":
-            print("Usage: ./pr-stats.py [yours gitloginname] [repo's URL address]")
+            print("Usage: ./pr-stats.py [yours gitloginname]"
+                  " [repo's URL address]")
             exit()
 
         if str(sys.argv[1]) == "--version":
@@ -31,7 +33,8 @@ if __name__ == "__main__":
 
 gitloginname = sys.argv[1]
 gitrepoapi = sys.argv[2]
-gitpasswd = getpass.getpass(prompt='Please, enter your GIThub password: ', stream=None)
+gitpasswd = getpass.getpass(
+    prompt='Please, enter your GIThub password: ', stream=None)
 
 # gitloginname = 'ttsrg'
 # gitrepoapi = "https://api.github.com/repos/alenaPy/devops_lab/pulls"
