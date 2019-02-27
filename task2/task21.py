@@ -12,6 +12,4 @@ def is_leap(year):
 
 
 if __name__ == '__main__':
-#year = int(input())
-#year=2000
     print(is_leap(int(input())))
