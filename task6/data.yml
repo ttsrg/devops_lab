@@ -1,0 +1,11 @@
+apache_vhosts:
+  - servername: test.epm
+    documentroot: /www/test
+    serveradmin: admin@test.epm
+    directorypath: /var/www/test/docs
+
+
+  - servername: laba.epm
+    documentroot: /www/laba
+    serveradmin: admin@laba.epm
+    directorypath: /var/www/laba/docs
