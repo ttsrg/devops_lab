@@ -28,7 +28,7 @@ print(re.match(r'(?P<n1>-?\d+)(?P<oper>'
 m = re.match(r'(?P<n1>-?\d+)(?P<oper>[-/*+])'
              r'(?P<n2>-?\d+)=(?P<n3>-?\d+)$', line)
 
-if m is 'None':
+if m is None:
     print("ERROR")
     w.write("ERROR")
     w.close()
