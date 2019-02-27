@@ -28,7 +28,7 @@ print(re.match(r'(?P<n1>-?\d+)(?P<oper>'
 m = re.match(r'(?P<n1>-?\d+)(?P<oper>[-/*+])'
              r'(?P<n2>-?\d+)=(?P<n3>-?\d+)$', line)
 
-if str(m) == 'None':
+if m is 'None':
     print("ERROR")
     w.write("ERROR")
     w.close()
@@ -41,7 +41,7 @@ for i in range(1, 5):
 
 n1 = int(m.group(1))
 do = m.group(2)
-n2 = int(m.group(3)
+n2 = int(m.group(3))
 res = int(m.group(4))
 
 if (abs(n1) or abs(n2) or abs(res)) > 30000:
