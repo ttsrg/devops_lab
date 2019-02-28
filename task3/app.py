@@ -1,4 +1,4 @@
-# pip install psutil configparser
+# pip install configparser
 # Requirement already satisfied: psutil in
 # ./.pyenv/versions/3.7.2/lib/python3.7/site-packages (5.5.1)
 # Requirement already satisfied: configparser in
@@ -46,10 +46,10 @@ for line in conf:
 
 print("intervalmin= ", intervalmin)
 
-for i in range(0, intervalmin):
+for i in range(intervalmin):
     Mon.hard()
     print("Date and time are", time.ctime())
-    time.sleep(60)
+    time.sleep(intervalmin*60)
 
 conf.close()
 exit(0)
