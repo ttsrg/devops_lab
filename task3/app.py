@@ -49,7 +49,7 @@ print("intervalmin= ", intervalmin)
 for i in range(intervalmin):
     Mon.hard()
     print("Date and time are", time.ctime())
-    time.sleep(intervalmin*60)
+    time.sleep(intervalmin * 60)
 
 conf.close()
 exit(0)
