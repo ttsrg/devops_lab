@@ -10,10 +10,8 @@ import time
 # import configparser
 import psutil
 import json
-import os.path
+# import os.path
 import datetime
-import threading
-#import settings
 
 
 class Mon:
@@ -32,12 +30,12 @@ class Mon:
             with open("mon.json", "a") as out:
                 json.dumps({'SNAPSHOT ' + str(Mon.count): timestamp,
                             'CPU_LOAD_%': cpu,
-                           'MEM_TOTAL_IN_GB':
-                            float("{:.2f}".format(mem_total)),
-                          'MEM_USED_IN_GB': float("{:.2f}".format(mem_used)),
-                           'READ_COUNT': io[0],
-                           'WRITE_COUNT': io[1],
-                           'BYTES_RECEIVED': net}, out, indent=1)
+                            'MEM_TOTAL_IN_GB':
+                                float("{:.2f}".format(mem_total)),
+                            'MEM_USED_IN_GB': float("{:.2f}".format(mem_used)),
+                            'READ_COUNT': io[0],
+                            'WRITE_COUNT': io[1],
+                            'BYTES_RECEIVED': net}, out, indent=1)
 
             Mon.count = Mon.count + 1
 
@@ -73,7 +71,6 @@ for line in conf:
 
     if "settings" and "interval" in line:
         intervalmin = int(line[11:])
-
 
 for i in range(intervalmin):
     Mon.hard()
